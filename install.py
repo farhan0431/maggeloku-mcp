@@ -324,7 +324,7 @@ def _remove_target(target: Path, force: bool = False) -> None:
 
 def install_plugin(profile: str, version: str = "auto", force: bool = False) -> Path:
     plugins_dir = qgis_plugins_dir(profile, version)
-    target = plugins_dir / "qgis_mcp_plugin"
+    target = plugins_dir / "maggeloku_mcp"
 
     if target.is_symlink() or target.exists() or os.path.islink(target):
         if target.is_symlink() and target.resolve() == PLUGIN_SRC.resolve():
@@ -352,7 +352,7 @@ def install_plugin(profile: str, version: str = "auto", force: bool = False) -> 
 
 
 def uninstall_plugin(profile: str, version: str = "auto", force: bool = False) -> None:
-    target = qgis_plugins_dir(profile, version) / "qgis_mcp_plugin"
+    target = qgis_plugins_dir(profile, version) / "maggeloku_mcp"
     if target.is_symlink() or target.exists() or os.path.islink(target):
         _remove_target(target, force)
         print(f"  Removed: {target}")

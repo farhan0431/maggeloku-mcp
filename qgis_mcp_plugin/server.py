@@ -102,7 +102,7 @@ class QgisMCPServer(
     last so the domain mixins can override nothing of QObject's by accident.
     """
 
-    LOG_TAG: ClassVar[str] = "MCP"
+    LOG_TAG: ClassVar[str] = "Maggeloku MCP"
 
     MAX_CLIENTS: ClassVar[int] = 10
 
@@ -309,7 +309,7 @@ class QgisMCPServer(
             else:
                 msg_log.messageReceived.connect(self._capture_message)
             QgsMessageLog.logMessage(
-                f"QGIS MCP server started on {self.host}:{self.port}", self.LOG_TAG, MSG_INFO
+                f"Maggeloku MCP server started on {self.host}:{self.port}", self.LOG_TAG, MSG_INFO
             )
             auth_on = bool(os.environ.get("QGIS_MCP_TOKEN", "").strip())
             QgsMessageLog.logMessage(
@@ -359,7 +359,7 @@ class QgisMCPServer(
             self._checkpoints.clear()
 
         self.socket = None
-        QgsMessageLog.logMessage("QGIS MCP server stopped", self.LOG_TAG, MSG_INFO)
+        QgsMessageLog.logMessage("Maggeloku MCP server stopped", self.LOG_TAG, MSG_INFO)
 
     def _disconnect_client(self, client_sock, message="Client disconnected", level=MSG_INFO):
         """Close and remove a client socket."""

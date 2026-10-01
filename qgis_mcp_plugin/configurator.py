@@ -170,7 +170,7 @@ class MCPConfiguratorDialog(QDialog):
         # Callable that starts the socket server and returns it (or None on
         # failure). Supplied by the plugin, which owns the toolbar state.
         self.start_server = start_server
-        self.setWindowTitle("QGIS MCP - Setup & Configurator")
+        self.setWindowTitle("Maggeloku MCP - Setup & Configurator")
         self.setMinimumSize(600, 500)
 
         self.repo_dir = Path(__file__).resolve().parent.parent
@@ -212,7 +212,7 @@ class MCPConfiguratorDialog(QDialog):
         header.addWidget(logo)
         title_col = QVBoxLayout()
         title_col.setSpacing(1)
-        heading = QLabel("QGIS MCP")
+        heading = QLabel("Maggeloku MCP")
         heading.setStyleSheet("font-size: 17px; font-weight: bold;")
         subtitle = QLabel("Connect your AI client to QGIS")
         subtitle.setStyleSheet("color: palette(mid);")

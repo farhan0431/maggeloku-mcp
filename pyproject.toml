@@ -9,9 +9,9 @@ packages = ["src/qgis_mcp"]
 package = true
 
 [project]
-name = "qgis-mcp"
-version = "0.15.0"
-description = "QGIS integration through the Model Context Protocol"
+name = "maggeloku-mcp"
+version = "1.0.0"
+description = "Maggeloku QGIS integration through the Model Context Protocol"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -20,6 +20,7 @@ dependencies = [
 ]
 
 [project.scripts]
+maggeloku-mcp-server = "qgis_mcp.server:main"
 qgis-mcp-server = "qgis_mcp.server:main"
 
 [dependency-groups]

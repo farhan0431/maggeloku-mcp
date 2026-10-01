@@ -1,17 +1,13 @@
 [general]
-name=QGIS MCP
+name=Maggeloku MCP
 qgisMinimumVersion=3.28
 qgisMaximumVersion=4.99
 supportsQt6=True
-description=Connect QGIS to any LLM through the Model Context Protocol (MCP)
-about=Socket server plugin that exposes QGIS operations to LLMs through the
-    Model Context Protocol. Any MCP client (Claude, Codex, Gemini CLI, Cursor,
-    VS Code, Windsurf, Zed, ...) can then drive QGIS: manage layers, edit
-    features, run processing algorithms, render maps, and more.
-
-    This plugin is only one half of the setup. You also need the qgis-mcp
-    MCP server, which your MCP client runs to talk to QGIS.
-    See https://github.com/nkarasiak/qgis-mcp for installation instructions.
+description=Connect QGIS to Maggeloku and AI agents via Model Context Protocol (MCP)
+about=Socket server plugin for Maggeloku that exposes QGIS operations to LLMs through the
+    Model Context Protocol. Enables AI agents (Maggeloku, Claude, Cursor, etc.) to directly
+    control QGIS: manage layers, edit features, run processing algorithms, render maps, and more.
+    Forked and adapted from qgis-mcp by Nicolas Karasiak.
 
     Features:
     - 118 MCP tools for layers, features, processing, rendering, layouts
@@ -21,13 +17,13 @@ about=Socket server plugin that exposes QGIS operations to LLMs through the
     - Non-blocking TCP socket server with length-prefixed framing
     - Toolbar button with port configuration dropdown
 
-version=0.15.0
-author=Nicolas Karasiak
-email=nicart@gmail.com
-tags=mcp,ai,claude,llm,automation,socket,remote
-homepage=https://github.com/nkarasiak/qgis-mcp
-tracker=https://github.com/nkarasiak/qgis-mcp/issues
-repository=https://github.com/nkarasiak/qgis-mcp
+version=1.0.0
+author=Farhan (Maggeloku)
+email=74524360+farhan0431@users.noreply.github.com
+tags=maggeloku,mcp,ai,claude,llm,automation,socket,remote
+homepage=https://github.com/farhan0431/magelloku
+tracker=https://github.com/farhan0431/magelloku/issues
+repository=https://github.com/farhan0431/magelloku
 license=GPLv2+
 category=Plugins
 icon=icons/icon.png

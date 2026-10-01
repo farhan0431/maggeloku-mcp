@@ -72,9 +72,9 @@ class QgisMCPPlugin:
         toolbar = self.iface.pluginToolBar()
 
         # Main action (used for menu entry + click handler)
-        self.action = QAction(self._logo_icon(), "Run MCP", self.iface.mainWindow())
+        self.action = QAction(self._logo_icon(), "Run Maggeloku MCP", self.iface.mainWindow())
         self.action.setCheckable(True)
-        self.action.setToolTip(f"Start MCP server on port {DEFAULT_PORT}")
+        self.action.setToolTip(f"Start Maggeloku MCP server on port {DEFAULT_PORT}")
         self.action.triggered.connect(self.toggle_server)
 
         # Port config in dropdown menu
@@ -128,16 +128,16 @@ class QgisMCPPlugin:
         self._toolbar_action = toolbar.addWidget(self.tool_button)
 
         self.help_action = QAction(
-            self._logo_icon(), "MCP Setup Configurator", self.iface.mainWindow()
+            self._logo_icon(), "Maggeloku MCP Setup Configurator", self.iface.mainWindow()
         )
         self.help_action.triggered.connect(self._show_help)
 
-        self.iface.addPluginToMenu("QGIS MCP", self.action)
-        self.iface.addPluginToMenu("QGIS MCP", self.help_action)
+        self.iface.addPluginToMenu("Maggeloku MCP", self.action)
+        self.iface.addPluginToMenu("Maggeloku MCP", self.help_action)
 
-        # Set the icon on the "QGIS MCP" submenu itself (top-level entry)
+        # Set the icon on the "Maggeloku MCP" submenu itself (top-level entry)
         for sub in self.iface.pluginMenu().actions():
-            if sub.text() == "QGIS MCP" and sub.menu():
+            if sub.text() == "Maggeloku MCP" and sub.menu():
                 sub.setIcon(self._logo_icon())
                 break
 
@@ -163,15 +163,15 @@ class QgisMCPPlugin:
         settings.setValue(f"{SETTINGS_PREFIX}/first_run", False)
 
         dlg = QDialog(self.iface.mainWindow())
-        dlg.setWindowTitle("Welcome to QGIS MCP")
+        dlg.setWindowTitle("Welcome to Maggeloku MCP")
         dlg.setMinimumWidth(420)
         layout = QVBoxLayout(dlg)
 
-        title = QLabel("<h2>QGIS MCP installed!</h2>")
+        title = QLabel("<h2>Maggeloku MCP installed!</h2>")
         layout.addWidget(title)
 
         body = QLabel(
-            "<p>This plugin lets AI assistants control QGIS directly "
+            "<p>This plugin lets Maggeloku and AI assistants control QGIS directly "
             "via the Model Context Protocol.</p>"
             "<p><b>Quick start:</b></p>"
             "<ol>"
@@ -319,7 +319,7 @@ class QgisMCPPlugin:
 
         clients = ", ".join(sorted({c for c, *_ in affected}))
         box = QMessageBox(self.iface.mainWindow())
-        box.setWindowTitle("QGIS MCP - fix offline startup?")
+        box.setWindowTitle("Maggeloku MCP - fix offline startup?")
         box.setIcon(MSGBOX_QUESTION)
         box.setText(
             f"Your MCP config for {clients} uses '--refresh-package', which "
@@ -370,7 +370,7 @@ class QgisMCPPlugin:
                 # line in the message log, so a port clash looks like nothing happened.
                 reason = self.server.start_error or "unknown error"
                 with contextlib.suppress(Exception):
-                    self.iface.messageBar().pushWarning("QGIS MCP", reason)
+                    self.iface.messageBar().pushWarning("Maggeloku MCP", reason)
                 self.server = None
                 self.action.setChecked(False)
         else:
@@ -378,8 +378,8 @@ class QgisMCPPlugin:
                 self.server.stop()
                 self.server = None
             self.action.setIcon(self._logo_icon())
-            self.action.setText("Run MCP")
-            self.action.setToolTip("Start MCP server")
+            self.action.setText("Run Maggeloku MCP")
+            self.action.setToolTip("Start Maggeloku MCP server")
             self.port_spin.setEnabled(True)
 
     def unload(self):
@@ -388,11 +388,11 @@ class QgisMCPPlugin:
             self.server = None
         if self.action:
             self.action.triggered.disconnect(self.toggle_server)
-            self.iface.removePluginMenu("QGIS MCP", self.action)
+            self.iface.removePluginMenu("Maggeloku MCP", self.action)
             self.action = None
         if self.help_action:
             self.help_action.triggered.disconnect(self._show_help)
-            self.iface.removePluginMenu("QGIS MCP", self.help_action)
+            self.iface.removePluginMenu("Maggeloku MCP", self.help_action)
             self.help_action = None
         if self._toolbar_action:
             self.iface.pluginToolBar().removeAction(self._toolbar_action)

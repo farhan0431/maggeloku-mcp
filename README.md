@@ -1,6 +1,8 @@
-# QGIS MCP
+# Maggeloku MCP
 
-Connect [QGIS](https://qgis.org/) to any AI agent that speaks the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), so the agent drives QGIS directly: manage layers, edit features, run processing algorithms, render maps, and more.
+> Forked and adapted from [qgis-mcp](https://github.com/nkarasiak/qgis-mcp) by Nicolas Karasiak. Part of the **Maggeloku** ecosystem.
+
+Connect [QGIS](https://qgis.org/) to Maggeloku and any AI agent that speaks the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), so the agent drives QGIS directly: manage layers, edit features, run processing algorithms, render maps, and more.
 
 125 MCP tools covering layer management, feature editing, processing, rendering, styling, layout & atlas authoring, cross-layer SQL, plugin development, and system management. Compatible with QGIS 3.28–4.x. Model and client agnostic: any MCP client works, among them Claude Code, Codex CLI, Gemini CLI, Qwen Code, Kimi Code CLI, GitHub Copilot CLI, opencode, LM Studio, Claude Desktop, Cursor, VS Code, Windsurf, Zed, and more.
 
@@ -10,7 +12,7 @@ Connect [QGIS](https://qgis.org/) to any AI agent that speaks the [Model Context
 AI agent ←→ MCP Server (FastMCP) ←→ TCP socket ←→ QGIS Plugin (QTimer) ←→ PyQGIS API
 ```
 
-1. **QGIS Plugin** (`qgis_mcp_plugin/`) - Runs inside QGIS. Non-blocking TCP socket server that processes JSON commands within QGIS's event loop.
+1. **QGIS Plugin** (`qgis_mcp_plugin/` / `maggeloku_mcp`) - Runs inside QGIS. Non-blocking TCP socket server that processes JSON commands within QGIS's event loop.
 2. **MCP Server** (`src/qgis_mcp/server.py`) - Runs outside QGIS. Exposes QGIS operations as MCP tools via [FastMCP](https://gofastmcp.com/).
 
 ## Installation
