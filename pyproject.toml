@@ -15,7 +15,7 @@ description = "Maggeloku QGIS integration through the Model Context Protocol (fo
 readme = "README.md"
 authors = [
     { name = "Nicolas Karasiak", email = "nicart@gmail.com" },
-    { name = "Farhan (Maggeloku)", email = "fhanfarhan@gmail.com" },
+    { name = "Farhan (Maggeloku)", email = "fhanfarhann@gmail.com" },
 ]
 requires-python = ">=3.12"
 dependencies = [

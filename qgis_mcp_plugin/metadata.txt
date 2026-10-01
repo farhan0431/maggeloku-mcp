@@ -22,7 +22,7 @@ about=Socket server plugin that exposes QGIS operations to LLMs through the
 
 version=1.0.0
 author=Nicolas Karasiak (original), Farhan (fork)
-email=nicart@gmail.com, fhanfarhan@gmail.com
+email=fhanfarhann@gmail.com, nicart@gmail.com
 tags=magelloku,mcp,ai,claude,llm,automation,socket,remote
 homepage=https://github.com/nkarasiak/qgis-mcp
 tracker=https://github.com/farhan0431/maggeloku-mcp/issues
