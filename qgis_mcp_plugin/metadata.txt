@@ -19,7 +19,7 @@ about=Socket server plugin for Maggeloku that exposes QGIS operations to LLMs th
 
 version=1.0.0
 author=Farhan (Maggeloku)
-email=74524360+farhan0431@users.noreply.github.com
+email=fhanfarhan@gmail.com
 tags=maggeloku,mcp,ai,claude,llm,automation,socket,remote
 homepage=https://github.com/farhan0431/magelloku
 tracker=https://github.com/farhan0431/magelloku/issues
