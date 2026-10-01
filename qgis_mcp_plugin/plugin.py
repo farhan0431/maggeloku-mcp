@@ -173,6 +173,8 @@ class QgisMCPPlugin:
         body = QLabel(
             "<p>This plugin lets Maggeloku and AI assistants control QGIS directly "
             "via the Model Context Protocol.</p>"
+            "<p style='color: #555;'><i>Originally developed by <b>Nicolas Karasiak</b> (<a href='https://github.com/nkarasiak/qgis-mcp'>qgis-mcp</a>). "
+            "Adapted for the Maggeloku ecosystem.</i></p>"
             "<p><b>Quick start:</b></p>"
             "<ol>"
             "<li>Click the MCP toolbar icon → <b>Start Server</b></li>"
@@ -187,7 +189,7 @@ class QgisMCPPlugin:
         layout.addStretch()
 
         btn_layout = QHBoxLayout()
-        github_btn = QPushButton("Open GitHub")
+        github_btn = QPushButton("Original GitHub (nkarasiak)")
         github_btn.clicked.connect(
             lambda: QDesktopServices.openUrl(QUrl("https://github.com/nkarasiak/qgis-mcp"))
         )

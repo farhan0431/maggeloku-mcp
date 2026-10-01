@@ -11,8 +11,12 @@ package = true
 [project]
 name = "maggeloku-mcp"
 version = "1.0.0"
-description = "Maggeloku QGIS integration through the Model Context Protocol"
+description = "Maggeloku QGIS integration through the Model Context Protocol (fork of qgis-mcp)"
 readme = "README.md"
+authors = [
+    { name = "Nicolas Karasiak", email = "nicart@gmail.com" },
+    { name = "Farhan (Maggeloku)", email = "fhanfarhan@gmail.com" },
+]
 requires-python = ">=3.12"
 dependencies = [
     "mcp[cli]>=1.20.0,<3",

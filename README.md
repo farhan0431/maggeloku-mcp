@@ -1,6 +1,9 @@
 # Maggeloku MCP
 
-> Forked and adapted from [qgis-mcp](https://github.com/nkarasiak/qgis-mcp) by Nicolas Karasiak. Part of the **Maggeloku** ecosystem.
+> 🌟 **Credits & Attribution:**
+> This repository is a fork of [**qgis-mcp**](https://github.com/nkarasiak/qgis-mcp) originally developed and maintained by **Nicolas Karasiak** ([@nkarasiak](https://github.com/nkarasiak)).
+> All credit for the underlying architecture, FastMCP protocol integration, PyQGIS socket server, and the 120+ MCP GIS tools belongs to Nicolas Karasiak and upstream contributors.
+> This fork adapts and rebrands the plugin for seamless integration into the **Maggeloku / Magelloku** ecosystem.
 
 Connect [QGIS](https://qgis.org/) to Maggeloku and any AI agent that speaks the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/), so the agent drives QGIS directly: manage layers, edit features, run processing algorithms, render maps, and more.
 
@@ -441,9 +444,14 @@ uv run --no-sync pytest tests/test_mcp_tools.py -v
 uv run --no-sync pytest tests/test_qgis_live.py -v
 ```
 
-## License
+## License & Acknowledgements
 
-This project is dual-licensed. Each component is distributed under its own license:
+This project is dual-licensed, respecting upstream licenses:
 
 - **QGIS Plugin** (`qgis_mcp_plugin/`) - [GNU GPL v2 or later](qgis_mcp_plugin/LICENSE)
 - **MCP Server** (`src/qgis_mcp/`) - [MIT](src/qgis_mcp/LICENSE)
+
+### Upstream Project
+- **Original repository:** [https://github.com/nkarasiak/qgis-mcp](https://github.com/nkarasiak/qgis-mcp)
+- **Original author:** [Nicolas Karasiak](https://github.com/nkarasiak)
+- Sincere thanks to Nicolas Karasiak and all contributors of upstream `qgis-mcp` for their incredible work on open-source GIS automation.
